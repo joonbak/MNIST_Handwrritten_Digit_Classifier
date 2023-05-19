@@ -22,7 +22,6 @@ def predict_digit_sketch(image):
 
 sp = gr.Sketchpad(shape=(28, 28))
 
-# Create the Gradio interface
 demo = gr.Interface(
     fn=predict_digit_sketch,
     inputs=sp,
@@ -31,5 +30,4 @@ demo = gr.Interface(
     description="Draw a digit sketch and let the model predict the digit.",
 )
 
-# Run the Gradio interface
 demo.launch(share=True)
